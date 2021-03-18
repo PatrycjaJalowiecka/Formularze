@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: peachpuff;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='kantor_style.css') }}">
+    <title>Exchange</title>
+    <h1>Currency exchange service</h1>
+</head>
+<body>
+
+  <p>Choose a currency from list below</p>
+        <form form action="" method="POST">
+
+            <label for="currency">Currency:</label>
+
+	        <select name="currency" id="currency">
+            <option value="USD">dolar amerykański</option>
+            <option value="AUD">dolar australijski</option>
+            <option value="CAD">dolar kanadyjski</option>
+            <option value="EUR">euro</option>
+            <option value="HUF">forint</option>
+            <option value="CHF">frank szwajcarski</option>
+            <option value="GBP">funt szterling</option>
+            <option value="JPY">jen</option>
+	        <option value="CZK">korona czeska</option>
+  	        <option value="DKK">korona duńska</option>
+  	        <option value="NOK">korona norweska</option>
+  	        <option value="SKK">korona szwedzka</option>  
+  	        <option value="SDR">XDR</option>
+            </select><br><br>
+            <label for="name">Amount of currency: </label>
+            <input type="number" id="quantity" name="quantity" value=""><br>
+            <h3>Score in PLN: {{ ask }}</h3> 
+            
+            <input type="submit" value="calculate">
+        </form>
+    </div>
+</body>
+</html>
